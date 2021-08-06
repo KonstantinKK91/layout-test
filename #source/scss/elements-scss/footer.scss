@@ -1,0 +1,54 @@
+//wrapper
+.footer-wrapper {
+	padding: 10px 0 20px 0;
+}
+//footer
+.footer {
+	@include JC-prefix(space-between);
+	border-top: 1px solid #e9e9e9;
+	padding-top: 40px;
+	&__copyright {
+		span {
+			font-size: 13px;
+			line-height: 1.54;
+			color: #8a8a8a;
+		}
+	}
+
+	&__links {
+		a {
+			margin-right: 10px;
+			img:hover {
+				-webkit-transform: scale(0.7, 0.7);
+				-ms-transform: scale(0.7, 0.7);
+				transform: scale(0.7, 0.7);
+			}
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+//?===media==================
+@media (max-width: 992px) {
+	.container {
+		max-width: 765px;
+	}
+	.footer {
+		padding: 18px 10px;
+	}
+}
+//=========================
+@media (max-width: 576px) {
+	.container {
+		max-width: none;
+	}
+	.footer {
+		@include JC-and-AI-prefix(center, center);
+		@include Flex-Direction(column);
+	}
+	.footer__copyright {
+		margin-bottom: 10px;
+	}
+}
