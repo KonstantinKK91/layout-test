@@ -18,7 +18,7 @@ blockBurger.addEventListener('click', () => {
 //Убирает класс active
 closeBtn.addEventListener('click', () => {
 	headerMenu.classList.toggle('active');
-	console.log(true)
+	body.style.overflow = 'auto';
 })
 
 
